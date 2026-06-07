@@ -3,163 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dragon Ethical Zone</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Cyber Stats</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial, sans-serif;
 background:#050505;
-color:white;
+color:#fff;
 }
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-color:#ff2a2a;
-font-size:28px;
-font-weight:700;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-nav a:hover{
-color:#ff2a2a;
-}
-
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("logo.jpg");
-background-size:cover;
-background-position:center;
 }
 
 .hero h1{
-font-size:5rem;
+font-size:3rem;
 color:#ff2a2a;
-text-shadow:0 0 25px red;
-}
-
-.hero p{
-font-size:1.2rem;
-margin:20px 0;
+text-shadow:0 0 20px red;
 }
 
 .btn{
-display:inline-block;
-padding:14px 30px;
-background:#ff2a2a;
-color:white;
-text-decoration:none;
-border-radius:50px;
-}
-
-.section{
-padding:80px 10%;
-}
-
-.card{
-background:#111;
-padding:25px;
-border-radius:15px;
-border:1px solid rgba(255,0,0,.3);
 margin-top:20px;
+padding:12px 25px;
+background:#ff2a2a;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
 }
 
-footer{
-background:#111;
+.btn:hover{
+background:#ff0000;
+box-shadow:0 0 20px red;
+}
+
+/* STATS */
+.stats{
+padding:100px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+background:#080808;
+}
+
+.stat-box{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,0,0,.3);
+backdrop-filter:blur(10px);
+padding:30px;
 text-align:center;
-padding:20px;
+border-radius:15px;
+transition:.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,0,0,.5);
+}
+
+.stat-box h2{
+font-size:3rem;
+color:#ff2a2a;
+text-shadow:0 0 15px red;
+}
+
+.stat-box p{
+margin-top:10px;
+font-size:1.1rem;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">Dragon Ethical Zone</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
+<!-- HERO SECTION -->
 <section class="hero">
-<div>
-<h1>DRAGON ETHICAL ZONE</h1>
-<p>Cyber Security Learning & Awareness Community</p>
+<h1>Cyber Ethical Zone</h1>
+<p>Welcome to modern cyber learning platform</p>
 
-<a class="btn"
-href="https://www.facebook.com/share/1S8PVxzxi6/"
-target="_blank">
-Facebook Page
-</a>
+<a href="#stats" class="btn">Explore</a>
+</section>
+
+<!-- STATS SECTION -->
+<section id="stats" class="stats">
+
+<div class="stat-box">
+<h2>20K+</h2>
+<p>Community Members</p>
 </div>
-</section>
 
-<section id="about" class="section">
-<h2>About Us</h2>
-
-<div class="card">
-Dragon Ethical Zone is a cyber security learning community focused on awareness, networking, and responsible security education.
+<div class="stat-box">
+<h2>100+</h2>
+<p>Courses</p>
 </div>
-</section>
 
-<section id="courses" class="section">
-<h2>Courses</h2>
+<div class="stat-box">
+<h2>500+</h2>
+<p>Articles</p>
+</div>
 
-<div class="card">Cyber Security Fundamentals</div>
-<div class="card">Network Security</div>
-<div class="card">Web Security</div>
-
-</section>
-
-<section id="contact" class="section">
-<h2>Contact</h2>
-
-<div class="card">
-Facebook:
-<a href="https://www.facebook.com/share/1S8PVxzxi6/" target="_blank">
-Dragon Ethical Zone
-</a>
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Support</p>
 </div>
 
 </section>
-
-<footer>
-© 2026 Dragon Ethical Zone
-</footer>
 
 </body>
 </html>
