@@ -3,14 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Stats</title>
+<title>Dragon Ethical Zone</title>
 
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#050505;
+font-family:Arial;
+background:#000;
 color:#fff;
+overflow-x:hidden;
+}
+
+/* GLITCH BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle,#1a0000,#000);
+z-index:-1;
+animation:hue 6s infinite alternate;
+}
+
+@keyframes hue{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(40deg);}
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:rgba(0,0,0,0.6);
+position:fixed;
+width:100%;
+top:0;
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+nav h2{
+color:#ff2a2a;
+text-shadow:0 0 10px red;
+}
+
+nav a{
+color:#fff;
+margin-left:15px;
+text-decoration:none;
+}
+
+nav a:hover{
+color:red;
 }
 
 /* HERO */
@@ -23,98 +69,244 @@ align-items:center;
 text-align:center;
 }
 
-.hero h1{
+.logo{
+width:130px;
+animation:float 3s infinite;
+filter:drop-shadow(0 0 20px red);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+h1{
 font-size:3rem;
 color:#ff2a2a;
 text-shadow:0 0 20px red;
 }
 
 .btn{
-margin-top:20px;
 padding:12px 25px;
-background:#ff2a2a;
-color:#fff;
-text-decoration:none;
+margin-top:20px;
+background:red;
+color:white;
 border-radius:8px;
-transition:.3s;
+cursor:pointer;
+text-decoration:none;
 }
 
 .btn:hover{
-background:#ff0000;
-box-shadow:0 0 20px red;
+box-shadow:0 0 25px red;
+}
+
+/* SECTIONS */
+section{
+padding:80px 10%;
 }
 
 /* STATS */
 .stats{
-padding:100px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,0,0,0.3);
+padding:25px;
+text-align:center;
+border-radius:12px;
+}
+
+.card h2{
+color:red;
+font-size:2.5rem;
+}
+
+/* COURSES */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-background:#080808;
+gap:20px;
 }
 
-.stat-box{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,0,0,.3);
-backdrop-filter:blur(10px);
-padding:30px;
-text-align:center;
-border-radius:15px;
-transition:.3s;
+.course{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
+border:1px solid rgba(255,0,0,0.3);
 }
 
-.stat-box:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(255,0,0,.5);
-}
-
-.stat-box h2{
-font-size:3rem;
+.course h3{
 color:#ff2a2a;
-text-shadow:0 0 15px red;
 }
 
-.stat-box p{
-margin-top:10px;
-font-size:1.1rem;
+/* DASHBOARD */
+.dashboard{
+display:none;
+background:#050505;
+border-top:1px solid red;
+}
+
+.panel{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.box{
+padding:20px;
+background:rgba(0,255,0,0.05);
+border:1px solid green;
+border-radius:10px;
+}
+
+/* LOGIN */
+.loginBox{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#0a0a0a;
+padding:30px;
+border:1px solid red;
+border-radius:10px;
+z-index:9999;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+background:black;
+border:1px solid red;
+color:white;
+}
+
+button{
+padding:10px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+width:100%;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-<h1>Cyber Ethical Zone</h1>
-<p>Welcome to modern cyber learning platform</p>
+<!-- NAV -->
+<nav>
+<h2>🐉 Dragon Zone</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#dashboard" onclick="toggleDash()">Dashboard</a>
+<a onclick="openLogin()">Login</a>
+</div>
+</nav>
 
-<a href="#stats" class="btn">Explore</a>
+<!-- HERO -->
+<section class="hero" id="home">
+
+<svg class="logo" viewBox="0 0 200 200">
+<path fill="red" d="M100 10 C140 40,160 30,170 60 C180 90,150 100,140 120 C120 160,150 170,120 190 C90 170,70 160,60 130 C40 100,50 70,70 40 C80 20,90 10,100 10Z"/>
+</svg>
+
+<h1>Dragon Ethical Zone</h1>
+<p>Cyber Security Learning Platform</p>
+
+<a class="btn" href="#courses">Explore</a>
 </section>
 
-<!-- STATS SECTION -->
-<section id="stats" class="stats">
-
-<div class="stat-box">
-<h2>20K+</h2>
-<p>Community Members</p>
+<!-- STATS -->
+<section>
+<h2 style="text-align:center;color:red;">🔥 Statistics</h2>
+<div class="stats">
+<div class="card"><h2>20K+</h2><p>Members</p></div>
+<div class="card"><h2>100+</h2><p>Courses</p></div>
+<div class="card"><h2>500+</h2><p>Articles</p></div>
+<div class="card"><h2>24/7</h2><p>Support</p></div>
 </div>
-
-<div class="stat-box">
-<h2>100+</h2>
-<p>Courses</p>
-</div>
-
-<div class="stat-box">
-<h2>500+</h2>
-<p>Articles</p>
-</div>
-
-<div class="stat-box">
-<h2>24/7</h2>
-<p>Support</p>
-</div>
-
 </section>
+
+<!-- COURSES -->
+<section id="courses">
+<h2 style="text-align:center;color:red;">💀 Courses</h2>
+
+<div class="grid">
+
+<div class="course">
+<h3>SQL Injection</h3>
+<p>Database attack awareness & protection.</p>
+</div>
+
+<div class="course">
+<h3>XSS Security</h3>
+<p>Cross site scripting prevention methods.</p>
+</div>
+
+<div class="course">
+<h3>DDoS Defense</h3>
+<p>How attacks work & how to defend systems.</p>
+</div>
+
+<div class="course">
+<h3>Dark Web Awareness</h3>
+<p>Safe learning about hidden web risks.</p>
+</div>
+
+</div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="dashboard" id="dashboard">
+<h2 style="text-align:center;color:red;">⚡ Live Dashboard</h2>
+
+<div class="panel">
+<div class="box">🟢 System Status: Active</div>
+<div class="box">👥 Users Online: 1,245</div>
+<div class="box">🛡️ Security Level: High</div>
+<div class="box">📡 Scan: Running</div>
+</div>
+</section>
+
+<!-- LOGIN -->
+<div class="loginBox" id="loginBox">
+<h3 style="color:red;">Login Panel</h3>
+<input placeholder="Username">
+<input type="password" placeholder="Password">
+<button onclick="login()">Enter System</button>
+</div>
+
+<!-- CONTACT -->
+<section>
+<h2 style="text-align:center;color:red;">📡 Join Community</h2>
+<p style="text-align:center;">
+[facebook.com](https://reference-url-citation.invalid/0)
+</p>
+</section>
+
+<script>
+function openLogin(){
+document.getElementById("loginBox").style.display="block";
+}
+
+function login(){
+alert("Access Granted ✔ (Demo System)");
+document.getElementById("loginBox").style.display="none";
+}
+
+function toggleDash(){
+let d=document.getElementById("dashboard");
+d.style.display = d.style.display==="block"?"none":"block";
+}
+</script>
 
 </body>
 </html>
