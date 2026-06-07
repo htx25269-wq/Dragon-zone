@@ -14,7 +14,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* GLITCH BACKGROUND */
+/* BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -38,8 +38,8 @@ align-items:center;
 padding:15px 8%;
 background:rgba(0,0,0,0.6);
 position:fixed;
-width:100%;
 top:0;
+width:100%;
 backdrop-filter:blur(10px);
 z-index:999;
 }
@@ -53,6 +53,7 @@ nav a{
 color:#fff;
 margin-left:15px;
 text-decoration:none;
+cursor:pointer;
 }
 
 nav a:hover{
@@ -67,12 +68,15 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding-top:60px;
 }
 
 .logo{
 width:130px;
+height:130px;
 animation:float 3s infinite;
 filter:drop-shadow(0 0 20px red);
+border-radius:10px;
 }
 
 @keyframes float{
@@ -85,6 +89,7 @@ h1{
 font-size:3rem;
 color:#ff2a2a;
 text-shadow:0 0 20px red;
+margin:10px 0;
 }
 
 .btn{
@@ -95,10 +100,12 @@ color:white;
 border-radius:8px;
 cursor:pointer;
 text-decoration:none;
+transition:.3s;
 }
 
 .btn:hover{
 box-shadow:0 0 25px red;
+transform:scale(1.05);
 }
 
 /* SECTIONS */
@@ -206,7 +213,7 @@ width:100%;
 <div>
 <a href="#home">Home</a>
 <a href="#courses">Courses</a>
-<a href="#dashboard" onclick="toggleDash()">Dashboard</a>
+<a onclick="toggleDash()">Dashboard</a>
 <a onclick="openLogin()">Login</a>
 </div>
 </nav>
@@ -214,19 +221,19 @@ width:100%;
 <!-- HERO -->
 <section class="hero" id="home">
 
-<svg class="logo" viewBox="0 0 200 200">
-<path fill="red" d="M100 10 C140 40,160 30,170 60 C180 90,150 100,140 120 C120 160,150 170,120 190 C90 170,70 160,60 130 C40 100,50 70,70 40 C80 20,90 10,100 10Z"/>
-</svg>
+<!-- LOGO -->
+<img src="Logo.jpg" class="logo" alt="Dragon Logo">
 
 <h1>Dragon Ethical Zone</h1>
 <p>Cyber Security Learning Platform</p>
 
-<a class="btn" href="#courses">Explore</a>
+<a class="btn" href="#courses">Explore Courses</a>
 </section>
 
 <!-- STATS -->
 <section>
 <h2 style="text-align:center;color:red;">🔥 Statistics</h2>
+
 <div class="stats">
 <div class="card"><h2>20K+</h2><p>Members</p></div>
 <div class="card"><h2>100+</h2><p>Courses</p></div>
@@ -243,22 +250,22 @@ width:100%;
 
 <div class="course">
 <h3>SQL Injection</h3>
-<p>Database attack awareness & protection.</p>
+<p>Database attack awareness & prevention.</p>
 </div>
 
 <div class="course">
 <h3>XSS Security</h3>
-<p>Cross site scripting prevention methods.</p>
+<p>Cross site scripting protection methods.</p>
 </div>
 
 <div class="course">
 <h3>DDoS Defense</h3>
-<p>How attacks work & how to defend systems.</p>
+<p>How attacks work & system protection.</p>
 </div>
 
 <div class="course">
 <h3>Dark Web Awareness</h3>
-<p>Safe learning about hidden web risks.</p>
+<p>Safe ethical understanding only.</p>
 </div>
 
 </div>
@@ -269,9 +276,9 @@ width:100%;
 <h2 style="text-align:center;color:red;">⚡ Live Dashboard</h2>
 
 <div class="panel">
-<div class="box">🟢 System Status: Active</div>
-<div class="box">👥 Users Online: 1,245</div>
-<div class="box">🛡️ Security Level: High</div>
+<div class="box">🟢 System: Active</div>
+<div class="box">👥 Users: 1,245</div>
+<div class="box">🛡️ Security: High</div>
 <div class="box">📡 Scan: Running</div>
 </div>
 </section>
@@ -281,12 +288,13 @@ width:100%;
 <h3 style="color:red;">Login Panel</h3>
 <input placeholder="Username">
 <input type="password" placeholder="Password">
-<button onclick="login()">Enter System</button>
+<button onclick="login()">Enter</button>
 </div>
 
-<!-- CONTACT -->
+<!-- FACEBOOK -->
 <section>
 <h2 style="text-align:center;color:red;">📡 Join Community</h2>
+
 <p style="text-align:center;">
 [facebook.com](https://reference-url-citation.invalid/0)
 </p>
@@ -298,7 +306,7 @@ document.getElementById("loginBox").style.display="block";
 }
 
 function login(){
-alert("Access Granted ✔ (Demo System)");
+alert("Access Granted ✔ (Demo)");
 document.getElementById("loginBox").style.display="none";
 }
 
