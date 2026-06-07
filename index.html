@@ -10,7 +10,8 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -18,36 +19,29 @@ background:#0b0b0b;
 color:white;
 }
 
-header{
+nav{
+position:fixed;
+width:100%;
+top:0;
 background:#111;
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:2px solid red;
+z-index:1000;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-width:70px;
-height:70px;
-border-radius:50%;
-}
-
-.logo h2{
-color:#ff2a2a;
+color:red;
+font-size:24px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
-font-weight:bold;
 }
 
 nav a:hover{
@@ -55,57 +49,60 @@ color:red;
 }
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 background:
 linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('logo.jpg');
+url("logo.jpg");
 background-size:cover;
 background-position:center;
 }
 
-.hero-content h1{
+.hero h1{
 font-size:60px;
 color:red;
 }
 
-.hero-content p{
+.hero p{
+margin-top:15px;
 font-size:20px;
-margin:20px 0;
 }
 
 .btn{
 display:inline-block;
-padding:12px 30px;
+margin-top:20px;
+padding:12px 25px;
 background:red;
 color:white;
 text-decoration:none;
 border-radius:5px;
 }
 
-.section{
-padding:80px 10%;
+section{
+padding:100px 10%;
 }
 
-.section h2{
+h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 color:red;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-background:#161616;
-padding:25px;
-border:1px solid #ff2a2a;
+background:#151515;
+padding:20px;
+border:1px solid red;
 border-radius:10px;
 }
 
@@ -114,88 +111,116 @@ margin-bottom:10px;
 color:red;
 }
 
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:#111;
+border:1px solid red;
+color:white;
+}
+
+button{
+padding:12px 25px;
+background:red;
+border:none;
+color:white;
+cursor:pointer;
+}
+
 footer{
 background:#111;
-padding:25px;
 text-align:center;
-margin-top:50px;
+padding:20px;
+border-top:2px solid red;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-<img src="logo.jpg">
-<h2>Dragon Ethical Zone</h2>
-</div>
-
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Courses</a>
-<a href="#">Blog</a>
-<a href="#">Contact</a>
-</nav>
-</header>
+<div class="logo">Dragon Ethical Zone</div>
 
-<section class="hero">
-<div class="hero-content">
-<h1>DRAGON ETHICAL ZONE</h1>
-<p>Cyber Security Learning & Awareness Platform</p>
-<a href="#" class="btn">Explore Courses</a>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
 </div>
+</nav>
+
+<section id="home" class="hero">
+<h1>DRAGON ETHICAL ZONE</h1>
+<p>Cyber Security Learning Community</p>
+<a href="#courses" class="btn">Explore Courses</a>
 </section>
 
-<section class="section">
-<h2>Popular Courses</h2>
+<section id="about">
+<h2>About Us</h2>
+<p>
+Dragon Ethical Zone is a cyber security awareness and learning community.
+We focus on ethical, responsible, and legal cyber security education.
+</p>
+</section>
+
+<section id="courses">
+<h2>Courses</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Cyber Security Fundamentals</h3>
-<p>Learn the basics of cyber security and online safety.</p>
+<h3>Cyber Security Basics</h3>
+<p>Introduction to cyber security concepts.</p>
 </div>
 
 <div class="card">
 <h3>Network Security</h3>
-<p>Understand networking concepts and defensive security practices.</p>
+<p>Learn networking and defensive security.</p>
 </div>
 
 <div class="card">
-<h3>Web Application Security</h3>
-<p>Learn secure web development and common security risks.</p>
+<h3>Web Security</h3>
+<p>Understand secure web development practices.</p>
 </div>
 
 </div>
 </section>
 
-<section class="section">
-<h2>Why Dragon Ethical Zone?</h2>
+<section id="blog">
+<h2>Latest Articles</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Expert Guidance</h3>
-<p>Structured learning materials and practical exercises.</p>
+<h3>What is Cyber Security?</h3>
+<p>Understanding cyber security fundamentals.</p>
 </div>
 
 <div class="card">
-<h3>Community Support</h3>
-<p>Learn together with a growing cyber security community.</p>
-</div>
-
-<div class="card">
-<h3>Ethical Learning</h3>
-<p>Focus on responsible and legal cyber security knowledge.</p>
+<h3>Online Safety Tips</h3>
+<p>Simple ways to stay safer online.</p>
 </div>
 
 </div>
 </section>
 
+<section id="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
 <footer>
-© 2026 Dragon Ethical Zone | All Rights Reserved
+© 2026 Dragon Ethical Zone. All Rights Reserved.
 </footer>
 
 </body>
