@@ -1,67 +1,174 @@
-            <!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice of Dragon Kings</title>
     <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#222; line-height:1.6; }
-        header { background:#111; color:white; text-align:center; padding:40px 20px; }
-        header img { max-width:170px; border-radius:50%; margin-bottom:15px; }
-        h1 { margin:10px 0; font-size:2.5em; }
-        main { max-width:900px; margin:30px auto; padding:30px; background:white; box-shadow:0 0 15px rgba(0,0,0,0.1); }
-        h2 { margin-top:40px; border-bottom:2px solid #ccc; padding-bottom:8px; }
-        .entry { margin:35px 0; }
-        footer { background:#111; color:white; text-align:center; padding:35px; margin-top:50px; }
-        audio { width:100%; margin:25px 0; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: rgba(0,0,0,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 16px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://i.ibb.co.com/0jKzY5Z/keffiyeh-hero.jpg') center/cover;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .title {
+            color: #d4af37;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .read-more {
+            background: #222;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px;
+            background: #111;
+        }
+        
+        .nav a {
+            color: #d4af37;
+            white-space: nowrap;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <img src="logo.jpg" alt="Voice of Dragon Kings">
-        <h1>Voice of Dragon Kings</h1>
-        <p>As a Muslim, the matters that need to be known and the necessity of purifying oneself accordingly.</p>
-        <p>একজন মুসলিম হিসেবে যেই বিষয়গুলো জানা এবং ওই অনুযায়ী নিজেকে পরিশুদ্ধ করার প্রয়োজন।</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="logo">👑 VOICE OF DRAGON KINGS</div>
+            <div style="font-size:14px;">+1234567890</div>
+        </div>
     </header>
 
-    <main>
-        <h2>Subjects</h2>
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#tawhid">Tawhid</a>
+        <a href="#aqidah">Aqidah & Manhaz</a>
+        <a href="#jihad">Jihad Fee-Sabilillah</a>
+        <a href="#imams">4 Imams</a>
+    </div>
 
-        <div class="entry">
-            <h3>T a whid</h3>
-            <p>তাওহীদ</p>
-            <p>[read more]</p>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1 style="color:#d4af37; font-size:42px;">VOICE OF DRAGON KINGS</h1>
+            <div style="font-size:28px; margin:20px 0;">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
         </div>
+    </section>
 
-        <div class="entry">
+    <div class="section">
+        <h2 class="title">SUBJECTS</h2>
+        <p style="text-align:center; font-size:17px;">
+            As a Muslim, the matters that need to be known and the necessity of purifying oneself accordingly.<br>
+            একজন মুসলিম হিসেবে যেই বিষয়গুলো জানা এবং ঐ অনুযায়ী নিজেকে পরিষ্কার করার প্রয়োজন।
+        </p>
+    </div>
+
+    <!-- Tawhid -->
+    <div id="tawhid" class="section">
+        <div class="card">
+            <h3>Tawhid তাওহীদ</h3>
+            <p>What is Tawhid? The meaning of Tawheed is: To single out Allah Ta'ala with all His rights...</p>
+            <a href="#" class="read-more">READ MORE</a>
+        </div>
+    </div>
+
+    <!-- Aqidah -->
+    <div id="aqidah" class="section">
+        <div class="card">
             <h3>Aqidah & Manhaz</h3>
-            <p>আকিদা এবং মানহাজ</p>
-            <p>[read more]</p>
+            <p>আক্বীদা এবং মানহাজ</p>
+            <a href="#" class="read-more">READ MORE</a>
         </div>
+    </div>
 
-        <div class="entry">
+    <!-- Jihad -->
+    <div id="jihad" class="section">
+        <div class="card">
             <h3>Jihad Fee-Sabilillah</h3>
             <p>জিহাদ ফি সাবিলিল্লাহ</p>
-            <p>[read more]</p>
+            <a href="#" class="read-more">READ MORE</a>
         </div>
+    </div>
 
-        <!-- Background Song -->
-        <h2>Voice of Dragon Kings</h2>
-        <audio controls autoplay loop>
-            <source src="song.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </main>
+    <!-- Imams -->
+    <div id="imams" class="section">
+        <h2 class="title">What Say Our Four Imams About Tawhid & Jihad</h2>
+        <div class="card">
+            <p>IMAM ABU HANIFA • IMAM MALIK • IMAM SHAFI • IMAM AHMAD</p>
+            <a href="#" class="read-more">See All</a>
+        </div>
+    </div>
 
-    <footer>
-        <p><strong>Contact Us</strong></p>
-        <p>Telegram: <a href="https://t.me/DRAGONETHICALZONE" target="_blank" style="color:white;">https://t.me/DRAGONETHICALZONE</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/share/17pw6C2Btz/" target="_blank" style="color:white;">https://www.facebook.com/share/17pw6C2Btz/</a></p>
-        <br>
-        <img src="logo.jpg" alt="Logo" width="100">
-        <p>&copy; Voice of Dragon Kings</p>
+    <!-- Contact -->
+    <div class="section" style="background:#111; text-align:center;">
+        <h2 style="color:#d4af37;">Contact Us</h2>
+        <p><strong>Telegram:</strong> <a href="https://t.me/DRAGONETHICALZONE" target="_blank" style="color:#00ff9d;">t.me/DRAGONETHICALZONE</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/17pw6C2Btz/" target="_blank" style="color:#00ff9d;">Voice of Dragon Kings</a></p>
+    </div>
+
+    <footer style="text-align:center; padding:30px; background:#000; border-top:1px solid #333;">
+        © 2025 VOICE OF DRAGON KINGS<br>
+        All Rights Reserved
     </footer>
 
 </body>
-</html>
+                                                                                  </html>
+            
