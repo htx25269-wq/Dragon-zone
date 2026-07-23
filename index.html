@@ -224,12 +224,13 @@ SUBJECTS
         <a href="https://www.facebook.com/share/17pw6C2Btz/" style="color:var(--gold);">Facebook</a>
     </p>
     
-    <audio controls loop style="width:100%;max-width:320px; margin-top:15px;">
+    <!-- 🔥 Auto Play Song -->
+    <audio id="autoSong" autoplay loop style="width:100%;max-width:320px; margin:20px auto; display:block;">
         <source src="song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
-    <p style="margin-top:25px;font-size:14px;">© 2025 VOICE OF DRAGON KINGS</p>
+    <p style="margin-top:10px;font-size:14px;">© 2025 VOICE OF DRAGON KINGS</p>
 </footer>
 
 <!-- Modal -->
@@ -241,6 +242,13 @@ SUBJECTS
 </div>
 
 <script>
+// Auto play song on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('autoSong');
+    audio.volume = 0.7; // Moderate volume
+});
+
+// Modal functions
 function openModal(id){
     let text = "";
     if(id === "tawhid"){
