@@ -7,22 +7,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
         
-        :root {
-            --gold: #d4af37;
-            --dark: #0a0a0a;
-        }
-        
+        :root { --gold: #d4af37; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Roboto', sans-serif;
             background: #000;
             color: #eee;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         header {
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0,0,0,0.95);
             padding: 12px 15px;
             position: sticky;
             top: 0;
@@ -33,14 +29,6 @@
             justify-content: space-between;
         }
         
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            color: var(--gold);
-        }
-        
         .hero {
             height: 260px;
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), 
@@ -48,18 +36,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-        }
-        
-        .subjects {
-            padding: 20px 15px;
-        }
-        
-        .section-title {
-            text-align: center;
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 20px;
         }
         
         .card {
@@ -74,7 +50,6 @@
             height: 160px;
             background-size: cover;
             background-position: center;
-            position: relative;
         }
         
         .read-more {
@@ -94,7 +69,7 @@
             width: 100%; height: 100%;
             background: rgba(0,0,0,0.97);
             z-index: 1000;
-            padding: 20px;
+            padding: 15px;
             overflow-y: auto;
         }
         
@@ -103,8 +78,8 @@
             padding: 25px;
             border-radius: 12px;
             border: 1px solid var(--gold);
-            max-width: 680px;
-            margin: 30px auto;
+            max-width: 700px;
+            margin: 20px auto;
         }
         
         .close {
@@ -113,13 +88,15 @@
             color: var(--gold);
             cursor: pointer;
         }
+        
+        h2, h3 { color: var(--gold); }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <span style="font-size: 32px;">🗡️</span>
+        <div style="display:flex; align-items:center; gap:10px; color:var(--gold);">
+            <span style="font-size:32px;">🗡️</span>
             <div>VOICE OF<br><span style="color:#fff; font-size:22px;">DRAGON WARRIORS</span></div>
         </div>
         <div style="font-size:28px; color:var(--gold);">☰</div>
@@ -127,68 +104,113 @@
 
     <div class="hero">
         <div style="text-align:center;">
-            <img src="https://i.ibb.co.com/3YkP5qZ/palestine-kufiya.jpg" alt="Kufiya" style="width:170px; border-radius:8px;">
+            <img src="https://i.ibb.co.com/3YkP5qZ/palestine-kufiya.jpg" alt="" style="width:170px; border-radius:8px;">
             <h2 style="color:#fff; margin-top:12px;">بَيْعَان</h2>
         </div>
     </div>
 
-    <div class="subjects">
-        <h2 class="section-title">SUBJECTS</h2>
+    <div style="padding:20px 15px;">
+        <h2 style="text-align:center; color:var(--gold); margin-bottom:20px;">SUBJECTS</h2>
         <p style="text-align:center; margin-bottom:25px; font-size:15px;">
             As a Muslim, the matters that need to be known and the necessity of purifying oneself accordingly.<br>
             একজন মুসলিম হিসেবে যেই বিষয়গুলো জানা এবং ঐ অনুযায়ী নিজেকে পরিশুদ্ধ করার প্রয়োজন।
         </p>
 
-        <!-- Tawhid -->
+        <!-- Cards -->
         <div class="card" onclick="openModal('tawhid')">
             <div class="card-img" style="background-image: url('https://i.ibb.co.com/0jKzL8Y/kufiya-hero.jpg');"></div>
             <div style="padding:18px;">
-                <h3 style="color:var(--gold);">Tawhid</h3>
+                <h3>Tawhid</h3>
                 <p style="color:#bbb;">তাওহীদ</p>
                 <button class="read-more" onclick="event.stopImmediatePropagation(); openModal('tawhid')">READ MORE</button>
             </div>
         </div>
 
-        <!-- Aqidah -->
         <div class="card" onclick="openModal('aqidah')">
-            <div class="card-img" style="background-image: url('https://i.ibb.co.com/5Y8vK9P/mosque-icon.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color:#1a1a1a;"></div>
+            <div class="card-img" style="background-image: url('https://i.ibb.co.com/5Y8vK9P/mosque-icon.jpg'); background-size: contain; background-color:#1a1a1a;"></div>
             <div style="padding:18px;">
-                <h3 style="color:var(--gold);">Aqidah & Manhaz</h3>
+                <h3>Aqidah & Manhaz</h3>
                 <p style="color:#bbb;">আকীদা এবং মানহাজ</p>
                 <button class="read-more" onclick="event.stopImmediatePropagation(); openModal('aqidah')">READ MORE</button>
             </div>
         </div>
 
-        <!-- Jihad -->
         <div class="card" onclick="openModal('jihad')">
             <div class="card-img" style="background-image: url('https://i.ibb.co.com/3YkP5qZ/palestine-kufiya.jpg');"></div>
             <div style="padding:18px;">
-                <h3 style="color:var(--gold);">Jihad Fee-Sabilillah</h3>
+                <h3>Jihad Fee-Sabilillah</h3>
                 <p style="color:#bbb;">জিহাদ ফি সাবিলিল্লাহ</p>
                 <button class="read-more" onclick="event.stopImmediatePropagation(); openModal('jihad')">READ MORE</button>
             </div>
         </div>
     </div>
 
-    <footer style="text-align:center; padding:30px 15px; color:#666; font-size:14px;">
-        <h3 style="color:var(--gold);">VOICE OF DRAGON WARRIORS</h3>
-        <p style="margin:15px 0;">
-            <a href="https://t.me/DRAGONETHICALZONE" target="_blank" style="color:var(--gold); margin:0 15px;">Telegram</a>
-            <a href="https://www.facebook.com/share/17pw6C2Btz/" target="_blank" style="color:var(--gold); margin:0 15px;">Facebook</a>
-        </p>
-        <p>© 2025 VOICE OF DRAGON WARRIORS</p>
-    </footer>
-
-    <!-- Modals (same as before) -->
+    <!-- Tawhid Modal -->
     <div id="tawhid-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('tawhid-modal')">×</span>
-            <h2 style="color:var(--gold); text-align:center;">TAWHID</h2>
-            <p><strong>What is Tawhid?</strong><br>The meaning of Tawheed is to single out Allah with all His rights...</p>
-            <!-- You can expand content here -->
-            <button class="read-more" style="margin-top:20px;" onclick="closeModal('tawhid-modal')">CLOSE</button>
+            <h2>TAWHID (তাওহীদ)</h2>
+            <h3>What is Tawhid?</h3>
+            <p>Tawhid means to single out Allah alone in His Lordship (Rububiyyah), Worship (Uluhiyyah), and Names & Attributes (Asma wa Sifat).</p>
+            
+            <h3>Types of Tawhid:</h3>
+            <ol>
+                <li><strong>Tawheed ar-Rububiyyah</strong>: Affirming that Allah alone is the Creator, Sustainer, and Disposer of all affairs.</li>
+                <li><strong>Tawheed al-Uluhiyyah</strong>: Directing all acts of worship (Salah, Du'a, Sacrifice, etc.) to Allah alone.</li>
+                <li><strong>Tawheed al-Asma wa Sifat</strong>: Affirming the Names and Attributes of Allah as mentioned in the Quran and Sunnah without distortion or negation.</li>
+            </ol>
+            <p style="margin-top:20px;">The opposite of Tawhid is Shirk, which is the greatest sin.</p>
+            <button class="read-more" onclick="closeModal('tawhid-modal')">CLOSE</button>
         </div>
     </div>
+
+    <!-- Aqidah Modal -->
+    <div id="aqidah-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('aqidah-modal')">×</span>
+            <h2>AQIDAH & MANHAZ</h2>
+            <p><strong>Aqidah</strong> is the firm belief in the heart regarding Allah, His Angels, Books, Messengers, the Last Day, and Qadr (Divine Decree).</p>
+            <p>We follow the Aqidah of the Salaf-us-Salih (Righteous Predecessors) — the Sahaba, Tabi'in, and those who followed them in righteousness.</p>
+            
+            <h3>Important Principles:</h3>
+            <ul>
+                <li>Returning to the Quran and Authentic Sunnah</li>
+                <li>Avoiding innovation (Bid'ah) in religion</li>
+                <li>Loving and hating for the sake of Allah</li>
+                <li>Staying away from Ahlul Bid'ah (People of Innovation)</li>
+            </ul>
+            <button class="read-more" onclick="closeModal('aqidah-modal')">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- Jihad Modal -->
+    <div id="jihad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('jihad-modal')">×</span>
+            <h2>JIHAD FEE-SABILILLAH</h2>
+            <p>Jihad means to strive and struggle in the way of Allah. It includes:</p>
+            <ul>
+                <li>Striving against one's own soul (Jihad an-Nafs)</li>
+                <li>Calling to Tawhid and warning against Shirk</li>
+                <li>Physical Jihad (Qital) when necessary under legitimate Islamic leadership</li>
+            </ul>
+            
+            <h3>What the Scholars Said:</h3>
+            <p>The Four Imams (Abu Hanifa, Malik, Shafi'i, Ahmad) and the Salaf unanimously agreed that Jihad remains until the Day of Judgment.</p>
+            
+            <p>Allah says: <strong>"And fight in the way of Allah those who fight you but do not transgress..."</strong> (Surah Al-Baqarah 2:190)</p>
+            <button class="read-more" onclick="closeModal('jihad-modal')">CLOSE</button>
+        </div>
+    </div>
+
+    <footer style="text-align:center; padding:30px 15px; color:#666;">
+        <h3 style="color:var(--gold);">VOICE OF DRAGON WARRIORS</h3>
+        <p style="margin:15px 0;">
+            <a href="https://t.me/DRAGONETHICALZONE" target="_blank" style="color:var(--gold);">Telegram</a> | 
+            <a href="https://www.facebook.com/share/17pw6C2Btz/" target="_blank" style="color:var(--gold);">Facebook</a>
+        </p>
+        <p>© 2025 VOICE OF DRAGON WARRIORS</p>
+    </footer>
 
     <script>
         function openModal(id) {
