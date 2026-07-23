@@ -5,65 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice of Dragon Kings</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #111; color: white; padding: 20px; text-align: center; }
-        header img { max-width: 150px; border-radius: 50%; }
-        h1 { margin: 10px 0; }
-        nav { background: #222; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        main { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .section { margin-bottom: 40px; }
-        footer { background: #111; color: white; text-align: center; padding: 15px; }
-        audio { width: 100%; margin: 20px 0; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans Bengali', Arial, sans-serif; margin:0; padding:0; background:#f8f8f8; color:#222; line-height:1.6; }
+        header { background:#1a1a1a; color:white; text-align:center; padding:20px 10px; }
+        header img { max-width:180px; border-radius:50%; margin-bottom:10px; }
+        h1 { margin:5px 0; font-size:2.2em; }
+        main { max-width:900px; margin:20px auto; padding:20px; background:white; box-shadow:0 0 15px rgba(0,0,0,0.1); }
+        h2, h3 { color:#111; border-bottom:2px solid #ddd; padding-bottom:8px; }
+        .content { margin:25px 0; }
+        footer { background:#1a1a1a; color:white; text-align:center; padding:25px; margin-top:30px; }
+        audio { width:100%; margin:20px 0; }
+        a { color:#0066cc; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.jpg" alt="Voice of Dragon Kings Logo">
+        <img src="logo.jpg" alt="Voice of Dragon Kings">
         <h1>Voice of Dragon Kings</h1>
-        <p>As a Muslim, the matters that need to be known and the necessity of purifying oneself accordingly.</p>
-        <p>একজন মুসলিম হিসেবে যেই বিষয়গুলো জানা এবং ওই অনুযায়ী নিজেকে পরিশুদ্ধ করার প্রয়োজন।</p>
+        <p>As a Muslim, the matters that need to be known and the necessity of purifying oneself accordingly.<br>
+        একজন মুসলিম হিসেবে যেই বিষয়গুলো জানা এবং ওই অনুযায়ী নিজেকে পরিশুদ্ধ করার প্রয়োজন।</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tawhid.html">Tawhid</a>
-        <a href="aqidah.html">Aqidah & Manhaz</a>
-        <a href="jihad.html">Jihad Fee-Sabilillah</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-
     <main>
-        <div class="section">
+        <div class="content">
             <h2>Subjects</h2>
-            <h3>Tawhid তাওহীদ</h3>
-            <p>[read more]</p>
             
-            <h3>Aqidah & Manhaz আকিদা এবং মানহাজ</h3>
-            <p>[read more]</p>
+            <h3>T a w h i d</h3>
+            <p>তাওহীদ</p>
+            <p><a href="#">[read more]</a></p><br>
             
-            <h3>Jihad Fee-Sabilillah জিহাদ ফি সাবিলিল্লাহ</h3>
-            <p>[read more]</p>
+            <h3>Aqidah & Manhaz</h3>
+            <p>আকিদা এবং মানহাজ</p>
+            <p><a href="#">[read more]</a></p><br>
+            
+            <h3>Jihad Fee-Sabilillah</h3>
+            <p>জিহাদ ফি সাবিলিল্লাহ</p>
+            <p><a href="#">[read more]</a></p>
         </div>
 
-        <!-- Background Song -->
-        <div class="section">
-            <h2>Our Voice / Song</h2>
+        <!-- Same Background Music -->
+        <div class="content">
+            <h2>Voice of Dragon Kings</h2>
             <audio controls autoplay loop>
                 <source src="song.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+                Your browser does not support the audio tag.
             </audio>
         </div>
     </main>
 
-    <footer id="contact">
+    <footer>
         <p><strong>Contact Us</strong></p>
         <p>Telegram: <a href="https://t.me/DRAGONETHICALZONE" target="_blank">https://t.me/DRAGONETHICALZONE</a></p>
         <p>Facebook: <a href="https://www.facebook.com/share/17pw6C2Btz/" target="_blank">https://www.facebook.com/share/17pw6C2Btz/</a></p>
-        <p>&copy; Voice of Dragon Kings - All Rights Reserved</p>
-        <img src="logo.jpg" alt="Logo" width="80">
+        <br>
+        <img src="logo.jpg" alt="Logo" width="100">
+        <p>&copy; Voice of Dragon Kings</p>
     </footer>
 
 </body>
-  </html>
+</html>
